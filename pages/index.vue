@@ -28,7 +28,6 @@
       </div>
     </div>
     <p>hello</p>
-    <img src="~/static/fondo.png" alt="">
   </div>
 </template>
 

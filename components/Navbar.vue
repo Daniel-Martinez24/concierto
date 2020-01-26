@@ -1,7 +1,7 @@
 <template>
   <div id="navBar" class="text">
     <ul id="izquiera">
-      <li>
+      <li id="imagen">
         <el-button type="text">
           <img src="~/static/logo.png" alt="">
         </el-button>
@@ -47,7 +47,7 @@
   #derecha {
       float: right;
       position: absolute;
-      margin-left: 80%;
+      right: 2vh;
   }
   #derecha li{
       float:left;
@@ -73,7 +73,7 @@
   #irMain {
       height: 1vh;
       width: auto;
-      margin-top: 11%;
+      margin-top: 3.5vh;
 
       margin-left: -15%;
       color: #00279B;
@@ -86,5 +86,36 @@
       justify-content: center;
       align-items: center;
       margin: -4%;
+  }
+  @media (max-width: 600px){
+    #izquiera li img{
+        display: none;
+    }
+    #navBar ul li{
+        margin: 1vh;
+    }
+    #izquiera li{
+        margin: 0vh;
+    }
+    #navBar{
+        top: 0%;
+    }
+    .text {
+        Font-Family: fantasy;
+        Font-Style: Bold;
+        Font-Size: 4px;
+    }
+    #irMain {
+        height: 1vh;
+        width: 90%;
+        margin-top: 0vh;
+
+        margin-left: 0%;
+        display: flex;
+    }
+    #irMain p {
+        margin: -4%;
+        Font-Size: 10px;
+    }
   }
 </style>
