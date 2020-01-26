@@ -4,27 +4,31 @@
     <div class="container">
       <div>
         <h1 class="title">
-          shekinah
+          <img src="~/static/shekinahLetters.svg" alt="">
         </h1>
         <h2 class="subtitle">
-          web de concierto
+          EL ARCA EN MOVIMIENTO
         </h2>
-        <div class="links">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            class="button--green"
-          >
-            Documentation
-          </a>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            class="button--grey"
-          >
-            GitHub
-          </a>
-        </div>
+        <h3 class="fecha">
+          MARZO 26
+        </h3>
+        <h3 class="fecha">
+          DE 18:00 A 22:00 HORAS
+        </h3>
+        <br>
+        <h3 class="lugar">
+          En el Lienzo Charro "Los Tamaulipecos"
+        </h3>
+        <h3 class="lugar">
+          Reynosa, Tamaulipas
+        </h3>
+        <br>
+        <br>
+        <el-button type="success" round>
+          <strong>
+            COMPRAR ENTRADAS
+          </strong>
+        </el-button>
       </div>
     </div>
     <p>hello</p>
@@ -53,26 +57,42 @@ export default {
   background: url('http://www.proyectosluzcasanova.org/wp-content/uploads/2017/05/violeta-escarchado-887151.jpg');
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+.title{
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+}
+.title img{
+  width: 30%;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-weight: 900;
+  font-size: 28px;
+  color: #fff;
   word-spacing: 5px;
-  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 25px;
 }
 
-.links {
-  padding-top: 15px;
+.fecha {
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 2px;
+}
+.lugar {
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 600px){
+  .title img{
+    width: 50%;
+  }
+  .subtitle {
+    display: none;
+  }
 }
 
 </style>

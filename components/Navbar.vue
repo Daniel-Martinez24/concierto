@@ -21,11 +21,6 @@
 </template>
 
 <style scoped>
-  .text {
-      Font-Family: fantasy;
-      Font-Style: Bold;
-      Font-Size: 14px;
-  }
   #navBar{
       background-color: (0, 0, 0, 0);
       width: 100%;
@@ -55,6 +50,7 @@
   }
   #derecha li p{
       color: white;
+      font-weight: 900;
   }
   #izquiera {
       margin: 0%;
@@ -80,6 +76,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-weight: 800;
   }
   #irMain p {
       display: flex;
@@ -100,11 +97,6 @@
     #navBar{
         top: 0%;
     }
-    .text {
-        Font-Family: fantasy;
-        Font-Style: Bold;
-        Font-Size: 4px;
-    }
     #irMain {
         height: 1vh;
         width: 90%;
@@ -116,6 +108,9 @@
     #irMain p {
         margin: -4%;
         Font-Size: 10px;
+    }
+    #derecha li p{
+        Font-Size: 12px;
     }
   }
 </style>
