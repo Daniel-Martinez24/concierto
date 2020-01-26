@@ -89,9 +89,22 @@ export default {
 @media (max-width: 600px){
   .title img{
     width: 50%;
+    padding-bottom: 10%;
   }
   .subtitle {
     display: none;
+  }
+  .fecha {
+    font-weight: 900;
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 2px;
+  }
+  .lugar {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    padding-bottom: 2px;
   }
 }
 
