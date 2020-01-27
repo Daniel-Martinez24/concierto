@@ -49,6 +49,47 @@
         </div>
       </div>
     </div>
+    <div class="descripcion">
+      <div>
+        <h3>UNA NOCHE DE ADORACIÓN CON</h3>
+        <h2>GRUPO BARAK</h2>
+        <div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+        <p>Nominados al Grammy Latino 2017</p>
+        <p>Llegan desde República Dominicana</p>
+        <p>Presentando su nuevo álbun SHEKINAH</p>
+        <br>
+        <br>
+        <p id="hash"><strong>#ShekinahLiveTour2020</strong></p>
+      </div>
+    </div>
+    <div class="entradas">
+      <div>
+        <h1>ADQUIERE TUS ENTRADAS</h1>
+        <br>
+        <p>¡Ahora puedes comprar tus boletos online!</p>
+        <p>Aceptamos tarjetas de crédito y débito,</p>
+        <p>además de pago en tiendas oxxo.</p>
+      </div>
+    </div>
     <p>hello</p>
   </div>
 </template>
@@ -66,6 +107,39 @@ export default {
 </script>
 
 <style>
+/*entradas*/
+.entradas {
+  background-color: #2D2D2D;
+  color: #fff;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.entradas h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/*descripcion*/
+.descripcion {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+
+  background: url('https://us.123rf.com/450wm/malven/malven1611/malven161100122/66379360-fondo-de-color-gris-textura-suave-monótono-de-papel-mate.jpg?ver=6');
+}
+.descripcion h2{
+  font-size: 36px;
+}
+
 /* invitados */
 #invitados {
   background-color: #2D2D2D;
