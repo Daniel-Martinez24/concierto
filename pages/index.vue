@@ -31,21 +31,62 @@
         </el-button>
       </div>
     </div>
+    <div id="invitados">
+      <div>
+        <h3 class="fecha">INVITADOS ESPECIALES</h3>
+        <br>
+        <div class="cards">
+          <div class="hijo">
+            <div>
+              <Card titulo="LEVANTANDO ALTARES" lugar="Desde Monterrey"/>
+            </div>
+          </div>
+          <div class="hijo">
+            <div>
+              <Card titulo="TANIA GARCíA" lugar="Desde Veracruz"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <p>hello</p>
   </div>
 </template>
 
 <script>
 import Navbar from '~/components/Navbar.vue'
+import Card from '~/components/Card.vue'
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Card
   }
 }
 </script>
 
 <style>
+/* invitados */
+#invitados {
+  background-color: #2D2D2D;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards .hijo {
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-top: 0vh;
+}
+/*main */
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -87,6 +128,23 @@ export default {
 }
 
 @media (max-width: 600px){
+  /* invitados */
+  #invitados {
+    min-height: 40vh;
+  }
+  .cards {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .cards .hijo {
+    margin: 2vh;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  /* main */
   .title img{
     width: 50%;
     padding-bottom: 10%;
