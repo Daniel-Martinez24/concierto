@@ -88,30 +88,36 @@
         <p>¡Ahora puedes comprar tus boletos online!</p>
         <p>Aceptamos tarjetas de crédito y débito,</p>
         <p>además de pago en tiendas oxxo.</p>
+        <br>
+        <div class="reja">
+          <Boletos
+            typeBoton="success"
+            nombreZona="RUEDO"
+            numeroZona="ZONA 1"
+            textBoton="COMPRAR ENTRADAS"
+            id="zona1"
+          />
+          <Boletos
+            typeBoton="info"
+            nombreZona="BUTACAS"
+            numeroZona="ZONA 2"
+            textBoton="AGOTADO"
+            id="zona2"
+          />
+        </div>
       </div>
     </div>
     <p>hello</p>
   </div>
 </template>
 
-<script>
-import Navbar from '~/components/Navbar.vue'
-import Card from '~/components/Card.vue'
-
-export default {
-  components: {
-    Navbar,
-    Card
-  }
-}
-</script>
-
 <style>
 /*entradas*/
 .entradas {
   background-color: #2D2D2D;
   color: #fff;
-  min-height: 60vh;
+  min-height: 70vh;
+  line-height: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,6 +128,30 @@ export default {
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
+}
+
+.entradas .reja {
+  display: grid;
+  grid-template-columns:  60vh 40vh;
+  grid-template-rows: 5vh 25vh 5vh;
+}
+#zona1 {
+   grid-column-start: 1;
+   grid-row-start: 1;
+   grid-row-end: 4;
+}
+#zona2 h1 {
+  font-size: 28px;
+  margin: 1vh;
+}
+#zona2 h4{
+  font-size: 16px;
+}
+#zona2 {
+   grid-column-start: 2;
+   grid-row-start: 2;
+   background: rgba(255, 255, 255, 0.75);
+   margin-left: -10%;
 }
 
 /*descripcion*/
@@ -202,6 +232,47 @@ export default {
 }
 
 @media (max-width: 600px){
+  /*entradas*/
+  .entradas {
+    min-height: 50vh;
+    line-height: 19px;
+  }
+  .entradas h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;
+  }
+
+  .entradas .reja {
+    margin-top: 1vh;
+    display: grid;
+    grid-template-columns:  50% 50%;
+    grid-template-rows:15vh ;
+  }
+  #zona1 {
+    grid-column-start: 1;
+    background-color: #2D2D2D;
+    color: #fff;
+  }
+  #zona2 h1 {
+    font-size: 18px;
+    margin: 3vh;
+  }
+  #zona1 h1 {
+    font-size: 18px;
+  }
+  #zona2 h4{
+    font-size: 16px;
+  }
+  #zona2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    background-color: #2D2D2D;
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(0, 0, 0, 0);
+  }
+
   /* invitados */
   #invitados {
     min-height: 40vh;
@@ -241,3 +312,17 @@ export default {
 }
 
 </style>
+
+<script>
+import Navbar from '~/components/Navbar.vue'
+import Card from '~/components/Card.vue'
+import Boletos from '~/components/Boletos.vue'
+
+export default {
+  components: {
+    Boletos,
+    Navbar,
+    Card
+  }
+}
+</script>
