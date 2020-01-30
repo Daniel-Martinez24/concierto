@@ -107,11 +107,146 @@
         </div>
       </div>
     </div>
-    <p>hello</p>
+    <div class="ubicacion">
+      <p>mapa</p>
+    </div>
+    <div class="footer">
+      <div class="sigueMt5">
+        <h1>ORGANIZA MT25 PRODUCCIONES</h1>
+        <div class="redesMt25">
+          <img src="https://ae01.alicdn.com/kf/HTB1ADjxxeOSBuNjy0Fdq6zDnVXaz.jpg_q50.jpg">
+          <div>
+            <p>
+              “NUESTROS DONES nos han sido dados junto con la encomienda de usarlos y desarrollarlos para la misión de la obra de Dios aquí en la tierra.“
+            </p>
+            <iframe
+              id="facebookMT25"
+              src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fministeriosmt25%2F&width=84&layout=button&action=like&size=small&share=false&height=65&appId"
+              width="84"
+              height="65"
+              style="border:none;overflow:hidden"
+              scrolling="no"
+              frameborder="0"
+              allowTransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="sigueBark">
+        <h1>SIGUE A GRUPO BARAK</h1>
+        <div class="redesBarak">
+          <iframe
+            id = "spotify"
+            src="https://open.spotify.com/follow/1/?uri=spotify:artist:2IzxJqK9NbSIdw7rQVW03P?si=V0JgegMcQ8qYkz5SeZ1HCg&size=detail&theme=dark&show-count=0"
+            width="300"
+            height="56"
+            scrolling="no"
+            frameborder="0"
+            style="border:none; overflow:hidden;"
+            allowtransparency="true"
+          ></iframe>
+          <iframe
+            id = "facebook"
+            src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FGrupoBarak%2F%3Fref%3Dbr_rs&width=100px&layout=button&action=like&size=small&height=65&appId"
+            width="100%"
+            height="65"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowTransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
+/*Footer*/
+
+.redesMt25 {
+  display:flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+.redesMt25 p{
+  margin: 1vh;
+  font-size: 12px;
+  line-height: 14px;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
+#facebookMT25 {
+  margin: 1vh;
+}
+.sigueMt5 img{
+  margin: 1vh;
+  width: 100px;
+  height: 100px;
+  left: 180px;
+  top: 2688px;
+  grid-column-start: 1;
+  grid-row-end: 3;
+}
+.sigueMt5 h1{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sigueMt5{
+  max-width: 50vh;
+  margin: 3vh;
+  margin-top: 6vh;
+}
+.sigueBark h1{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.redesBarak{
+  display: grid;
+  grid-template-columns:  60% 40%;
+}
+
+.sigueBark {
+  max-width: 50vh;
+  margin: 3vh;
+  margin-top: 6vh;
+}
+
+#spotify {
+  grid-column-start: 1;
+  width: 100vh;
+
+  margin: 5%;
+
+}
+#facebook {
+  grid-column-start: 2;
+  width: 40vh;
+  margin-top: 20%;
+  margin-left: 13%;
+  /*
+  margin: 3%;
+  */
+}
+
+.footer {
+  background-color: #2D2D2D;
+  color: #fff;
+  min-height: 30vh;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
 /*entradas*/
 .entradas {
   background-color: #2D2D2D;
