@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="ubicacion">
-      <p>mapa</p>
+      <Mapa />
     </div>
     <div class="footer">
       <div class="sigueMt5">
@@ -559,11 +559,13 @@
 import Navbar from '~/components/Navbar.vue'
 import Card from '~/components/Card.vue'
 import Boletos from '~/components/Boletos.vue'
+import Mapa from '~/components/Mapa.vue'
 
 export default {
   components: {
     Boletos,
     Navbar,
+    Mapa,
     Card
   }
 }
