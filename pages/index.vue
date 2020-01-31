@@ -123,7 +123,7 @@
               id="facebookMT25"
               src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fministeriosmt25%2F&width=84&layout=button&action=like&size=small&share=false&height=65&appId"
               width="84"
-              height="65"
+              height="20"
               style="border:none;overflow:hidden"
               scrolling="no"
               frameborder="0"
@@ -168,10 +168,9 @@
       </div>
       <div>
         <div class="derechos">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0C2.68628 0 0 2.68628 0 6C0 9.31372 2.68628 12 6 12C9.31372 12 12 9.31372 12 6C12 2.68628 9.31372 0 6 0ZM8.83389 8.38918C8.79537 8.43435 7.87156 9.49558 6.1762 9.49558C4.1272 9.49558 2.68062 7.9651 2.68062 5.9738C2.68062 4.00679 4.18072 2.50442 6.15873 2.50442C7.77866 2.50442 8.62563 3.4072 8.66088 3.44565C8.70431 3.49299 8.73082 3.5534 8.73624 3.61742C8.74166 3.68145 8.72569 3.74546 8.69083 3.79943L8.14938 4.63785C8.05142 4.78948 7.84033 4.8157 7.70823 4.69338C7.7026 4.6882 7.0664 4.11564 6.21114 4.11564C5.09543 4.11564 4.42285 4.92794 4.42285 5.95633C4.42285 6.91444 5.04012 7.88436 6.21987 7.88436C7.15609 7.88436 7.79923 7.19877 7.80561 7.19182C7.92977 7.05719 8.14575 7.07006 8.25339 7.2173L8.84727 8.02952C8.88581 8.08224 8.90545 8.14642 8.90303 8.21168C8.9006 8.27694 8.87624 8.33947 8.83389 8.38918Z" fill="white"/>
-          </svg>
-          <p>2020 TODOS LOS DERECHOS RESERVADOS. MT25PRODUCCIONES</p>
+          <div>
+            <p>© 2020 TODOS LOS DERECHOS RESERVADOS. MT25PRODUCCIONES</p>
+          </div>
         </div>
       </div>
       <br>
@@ -421,6 +420,11 @@
 }
 
 @media (max-width: 600px){
+  /* terminos "*/
+  .terminos {
+    display:block;
+  }
+
   /*Footer*/
   .redesMt25 {
     display:flex;
@@ -428,40 +432,17 @@
     align-items: left;
     text-align: left;
   }
-  .redesMt25 p{
-    margin: 1vh;
-    font-size: 12px;
-    line-height: 14px;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-  }
-
-  #facebookMT25 {
-    margin: 1vh;
-  }
   .sigueMt5 img{
     margin: 1vh;
-    width: 100px;
-    height: 100px;
-    left: 180px;
-    top: 2688px;
     grid-column-start: 1;
     grid-row-end: 3;
   }
-  .sigueMt5 h1{
-    font-weight: bold;
-    font-size: 16px;
-  }
 
   .sigueMt5{
+    grid-row-start: 2;
     max-width: 50vh;
     margin: 3vh;
-    margin-top: 6vh;
-  }
-  .sigueBark h1{
-    font-weight: bold;
-    font-size: 16px;
+    margin-top: 3vh;
   }
 
   .redesBarak{
@@ -470,37 +451,28 @@
   }
 
   .sigueBark {
+    grid-row-start: 1;
     max-width: 50vh;
     margin: 3vh;
-    margin-top: 6vh;
-  }
+    margin-top: 3vh;
 
+  }
   #spotify {
     grid-column-start: 1;
-    width: 100vh;
+    width: 40vh;
 
     margin: 5%;
-
   }
   #facebook {
     grid-column-start: 2;
-    width: 40vh;
+    width: 15vh;
     margin-top: 20%;
-    margin-left: 13%;
-    /*
-    margin: 3%;
-    */
+    margin-left: 0%;
   }
 
   .footer {
-    background-color: #2D2D2D;
-    color: #fff;
-    min-height: 30vh;
-    line-height: 19px;
-    display: block;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
+    display: grid;
+    grid-template-rows:  35% 30%;
   }
   /*entradas*/
   .entradas {
