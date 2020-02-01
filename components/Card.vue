@@ -1,6 +1,7 @@
 <template>
   <div id="card">
-    <img src="https://imagenes.heraldo.es/files/image_990_v1/uploads/imagenes/2017/12/02/_mazin_eaa4ec1d.jpg" alt="">
+    <img v-if="imagen == 'primera'" src="~/static/levantandoaltareslogo.jpg" alt="">
+    <img v-else src="~/static/foto-perfil-barak.jpg" alt="">
     <div>
       <h3>{{ titulo }}</h3>
       <p>{{lugar}}</p>
@@ -10,9 +11,15 @@
 <script>
 export default {
   props: [
+    'imagen',
     'titulo',
     'lugar'
-  ]
+  ],
+  data () {
+    return {
+      foto: '~/static/levantandoaltareslogo.jpg'
+    }
+  }
 }
 </script>
 
@@ -23,7 +30,10 @@ export default {
    text-align: center;
 }
 #card img {
-    width: 10vh;
+    width: 56.84px;
+    height: 56.78px;
+    left: 1.26px;
+    top: 1.89px;
     border-radius: 50px;
     margin-right: 2vh;
     border-width: 2px;
@@ -44,7 +54,8 @@ export default {
 
 @media (max-width: 600px){
   #card img {
-      width: 15vh;
+      width: 56.84px;
+      height: 56.78px;
       border-style: solid;
       border-color: #fff;
   }

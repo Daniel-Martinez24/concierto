@@ -35,17 +35,17 @@
     </div>
     <div id="invitados">
       <div>
-        <h3 class="fecha">INVITADOS ESPECIALES</h3>
+        <h3>INVITADOS ESPECIALES</h3>
         <br>
         <div class="cards">
           <div class="hijo">
             <div>
-              <Card titulo="LEVANTANDO ALTARES" lugar="Desde Monterrey"/>
+              <Card imagen='primera' titulo="LEVANTANDO ALTARES" lugar="Desde Monterrey"/>
             </div>
           </div>
           <div class="hijo">
             <div>
-              <Card titulo="TANIA GARCíA" lugar="Desde Veracruz"/>
+              <Card imagen='que' titulo="TANIA GARCíA" lugar="Desde Veracruz"/>
             </div>
           </div>
         </div>
@@ -369,6 +369,15 @@
   align-items: center;
   text-align: center;
 }
+#invitados h3 {
+  font-weight: 900;
+  color: #fff;
+  padding-bottom: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .cards {
   display: flex;
   justify-content: center;
@@ -523,6 +532,13 @@
   /* invitados */
   #invitados {
     min-height: 40vh;
+  }
+  #invitados h3 {
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1vh;
+    font-weight: bold;
+    font-size: 18px;
   }
   .cards {
     display: block;
