@@ -3,6 +3,9 @@
     <Navbar class="NavBar" />
     <div class="container">
       <div>
+        <br>
+        <br>
+        <br>
         <h1 class="title">
           <img src="~/static/shekinahLetters.svg" alt="">
         </h1>
@@ -22,7 +25,6 @@
         <h3 class="lugar">
           Reynosa, Tamaulipas
         </h3>
-        <br>
         <br>
         <el-button type="success" round>
           <strong>
@@ -379,15 +381,18 @@
   margin-top: 0vh;
 }
 /*main */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  .container {
+    margin: 0 auto;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  background: url('http://www.proyectosluzcasanova.org/wp-content/uploads/2017/05/violeta-escarchado-887151.jpg');
+    background: url('https://firebasestorage.googleapis.com/v0/b/diferentes-a2ca8.appspot.com/o/fondo.png?alt=media&token=c7fedd12-091d-442d-8939-488c0f9dc083');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .title{
@@ -408,13 +413,13 @@
 
 .fecha {
   font-weight: 900;
-  font-size: 18px;
+  font-size: 12px;
   color: #fff;
   padding-bottom: 2px;
 }
 .lugar {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   color: #fff;
   padding-bottom: 2px;
 }
@@ -532,22 +537,24 @@
     margin-right: 0%;
   }
   /* main */
+
   .title img{
     width: 50%;
     padding-bottom: 10%;
+    padding: 4vh;
   }
   .subtitle {
     display: none;
   }
   .fecha {
     font-weight: 900;
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
     padding-bottom: 2px;
   }
   .lugar {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     color: #fff;
     padding-bottom: 2px;
   }
