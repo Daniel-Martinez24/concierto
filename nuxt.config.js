@@ -29,6 +29,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    /* mapbox */
+    { src: '~/plugins/mapbox', mode: 'client' },
     '@/plugins/element-ui'
   ],
   /*

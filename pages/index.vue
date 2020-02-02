@@ -124,7 +124,7 @@
       </div>
     </div>
     <div class="ubicacion">
-      <Mapa />
+      <Mapa class="mapa" />
     </div>
     <div class="footer">
       <div class="sigueMt5">
@@ -195,6 +195,22 @@
 </template>
 
 <style>
+/* Ubicacion */
+.ubicacion {
+  z-index: -1;
+  margin: 0 auto;
+  height: 100vh;
+
+}
+.ubicacion .mapa{
+
+  z-index: -1;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+ 
+}
+
 /* video */
  #video {
   position: absolute;
@@ -465,6 +481,10 @@
 }
 
 @media (max-width: 600px){
+  /*video */
+  #video{
+    display:none;
+  }
   /* terminos "*/
   .terminos {
     display:block;
