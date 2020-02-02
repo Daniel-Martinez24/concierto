@@ -1,13 +1,14 @@
 <template>
   <div>
     <Navbar class="NavBar" />
+    <video id = "video" loop=»loop» autoplay=»autoplay» src="~/static/video.webm"></video>
     <div class="container">
       <div>
         <br>
         <br>
         <br>
         <h1 class="title">
-          <img src="~/static/shekinahLetters.svg" alt="">
+          <img style="z-index:100;" src="~/static/shekinahLetters.svg" alt="">
         </h1>
         <h2 class="subtitle">
           EL ARCA EN MOVIMIENTO
@@ -56,19 +57,21 @@
         <h3>UNA NOCHE DE ADORACIÓN CON</h3>
         <h2>GRUPO BARAK</h2>
         <div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+          <div class="espacios">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
           <br>
           <br>
           <br>
@@ -78,9 +81,11 @@
         <p>Nominados al Grammy Latino 2017</p>
         <p>Llegan desde República Dominicana</p>
         <p>Presentando su nuevo álbun SHEKINAH</p>
+        <div class="espacios">
+          <br>
+        </div>
         <br>
-        <br>
-        <p id="hash"><strong>#ShekinahLiveTour2020</strong></p>
+        <p><strong>#ShekinahLiveTour2020</strong></p>
       </div>
     </div>
     <div class="entradas">
@@ -93,10 +98,19 @@
         <br>
         <div class="reja">
           <Boletos
+            v-if="pantalla > 600"
             typeBoton="success"
             nombreZona="RUEDO"
             numeroZona="ZONA 1"
-            textBoton="COMPRAR ENTRADAS"
+            :textBoton="comprar[0]"
+            id="zona1"
+          />
+          <Boletos
+            v-else
+            typeBoton="success"
+            nombreZona="RUEDO"
+            numeroZona="ZONA 1"
+            :textBoton="comprar[1]"
             id="zona1"
           />
           <Boletos
@@ -116,7 +130,7 @@
       <div class="sigueMt5">
         <h1>ORGANIZA MT25 PRODUCCIONES</h1>
         <div class="redesMt25">
-          <img src="https://ae01.alicdn.com/kf/HTB1ADjxxeOSBuNjy0Fdq6zDnVXaz.jpg_q50.jpg">
+          <img src="~/static/logo.png">
           <div>
             <p>
               “NUESTROS DONES nos han sido dados junto con la encomienda de usarlos y desarrollarlos para la misión de la obra de Dios aquí en la tierra.“
@@ -181,6 +195,17 @@
 </template>
 
 <style>
+/* video */
+ #video {
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  background-color: rgba(0,0,0,1);
+}
+
 /* terminos "*/
 .final {
   justify-content: center;
@@ -346,6 +371,7 @@
 
 /*descripcion*/
 .descripcion {
+
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -354,7 +380,10 @@
   text-align: center;
   color: #fff;
 
-  background: url('https://us.123rf.com/450wm/malven/malven1611/malven161100122/66379360-fondo-de-color-gris-textura-suave-monótono-de-papel-mate.jpg?ver=6');
+  background: url('https://firebasestorage.googleapis.com/v0/b/diferentes-a2ca8.appspot.com/o/foto%20concierto%20anterior%20-%20bn.jpg?alt=media&token=0820554c-d11d-48ff-b9b3-44e2816c81ac');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .descripcion h2{
   font-size: 36px;
@@ -362,6 +391,8 @@
 
 /* invitados */
 #invitados {
+  z-index: 5;
+  visibility: visible;
   background-color: #2D2D2D;
   min-height: 30vh;
   display: flex;
@@ -392,26 +423,26 @@
 /*main */
   .container {
     margin: 0 auto;
-    height: 60vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    background: url('https://firebasestorage.googleapis.com/v0/b/diferentes-a2ca8.appspot.com/o/fondo.png?alt=media&token=c7fedd12-091d-442d-8939-488c0f9dc083');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-color:  rgba(0, 39, 155, 0.25);
 }
 
 .title{
   display: block;
 }
 .title img{
+  z-index: 100;
+  visibility: visible;
   width: 30%;
 }
 
 .subtitle {
+  z-index: 5;
   font-weight: 900;
   font-size: 28px;
   color: #fff;
@@ -422,13 +453,13 @@
 
 .fecha {
   font-weight: 900;
-  font-size: 12px;
+  font-size: 18px;
   color: #fff;
   padding-bottom: 2px;
 }
 .lugar {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 18px;
   color: #fff;
   padding-bottom: 2px;
 }
@@ -528,10 +559,29 @@
     color: rgba(255, 255, 255, 0.75);
     background: rgba(0, 0, 0, 0);
   }
-
+  /*descripcion*/
+  .descripcion {
+      background: url('https://firebasestorage.googleapis.com/v0/b/diferentes-a2ca8.appspot.com/o/foto%20concierto%20anterior%20-%20bn.jpg?alt=media&token=0820554c-d11d-48ff-b9b3-44e2816c81ac');
+      /*esto es lo importate tamaño de imagen*/
+      background-size: 100%;
+      background-repeat: no-repeat;
+      min-height: 35vh;
+  }
+  .descripcion h3{
+    font-size: 12px;
+  }
+  .descripcion h2{
+    font-size: 20px;
+  }
+  .descripcion p{
+    font-size: 12px;
+  }
+  .espacios{
+    display:none;
+  }
   /* invitados */
   #invitados {
-    min-height: 40vh;
+    min-height: 35vh;
   }
   #invitados h3 {
     font-weight: 900;
@@ -553,6 +603,13 @@
     margin-right: 0%;
   }
   /* main */
+  .container {
+    height: 60vh;
+    background: url('https://firebasestorage.googleapis.com/v0/b/diferentes-a2ca8.appspot.com/o/fondo.png?alt=media&token=c7fedd12-091d-442d-8939-488c0f9dc083');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+ }
 
   .title img{
     width: 50%;
@@ -590,6 +647,15 @@ export default {
     Navbar,
     Mapa,
     Card
+  },
+  data () {
+    return {
+      pantalla: '',
+      comprar: ['COMPRAR ENTRADAS', 'COMPRAR']
+    }
+  },
+  mounted () {
+    this.pantalla = screen.width
   }
 }
 </script>

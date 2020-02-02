@@ -67,7 +67,7 @@ export default {
     font-weight: 300;
     font-size: 16px;
     color: #fff;
-    padding-bottom: 2px;
+    padding-bottom: 0px;
   }
 }
 </style>
