@@ -481,6 +481,18 @@
 }
 
 @media (max-width: 600px){
+  /* Ubicacion */
+  .ubicacion {
+    z-index: -1;
+    margin: 0 auto;
+    height: 30vh;
+  }
+  .ubicacion .mapa{
+    z-index: -1;
+    margin: 0;
+    width: 100%;
+    height: 30vh;
+  }
   /*video */
   #video{
     display:none;
