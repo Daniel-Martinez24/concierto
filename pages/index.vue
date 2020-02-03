@@ -481,6 +481,9 @@
 }
 
 @media (max-width: 600px){
+  body {
+    background-color: #2D2D2D;
+  }
   /* Ubicacion */
   .ubicacion {
     z-index: -1;
