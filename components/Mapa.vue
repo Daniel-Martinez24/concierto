@@ -94,7 +94,7 @@ export default {
 @media (max-width: 600px){
 .map {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .map h2 {
   position: absolute;
