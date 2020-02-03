@@ -282,7 +282,7 @@
 }
 .sigueMt5 img{
   margin: 1vh;
-  width: 100px;
+  width: auto;
   height: 100px;
   left: 180px;
   top: 2688px;
