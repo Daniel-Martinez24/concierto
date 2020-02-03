@@ -76,7 +76,7 @@ export default {
 .map p {
   position: absolute;
   z-index: 10;
-  left: 37%;
+  left: 34%;
   top: 90%;
 
   font-weight: normal;
