@@ -54,7 +54,8 @@ export default {
 .map {
   position: relative;
   color: #fff;
-  width: 100vh;
+  
+  width: 100%;
 }
 .map h2 {
   position: absolute;
