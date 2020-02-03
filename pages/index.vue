@@ -217,7 +217,7 @@
   left: 0;
   top: -5%;
   width: 100%;
-  height: auto;
+  height: 110%;
   z-index: -1;
   background-color: rgba(0,0,0,1);
 }
